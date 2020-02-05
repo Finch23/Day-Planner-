@@ -1,6 +1,33 @@
 .jumbotron {
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 };
 
+.row {
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: blue;
+}
 
+.container {
+    width: 80%;
+    margin: auto;
+}
 
+.form-control {
+    width: 400px;
+}
+
+.form-group {
+    margin: 15px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkcyan;
+}
+
+.saveBtn {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 8rem;
+}
