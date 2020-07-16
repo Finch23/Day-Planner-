@@ -18,7 +18,7 @@ $(document).ready(function() {
         event.preventDefault();
         var input = ($(this).prev('.saveBtn').prev().val());
         var id = ($(this).prev('.saveBtn').prev().attr('id'));
-        location.reload();
+        location.reload()
         localStorage.removeItem('input' + id, input);
         console.log(localStorage)
     })
@@ -32,13 +32,13 @@ $(document).ready(function() {
             var times = 'input' + i;
             $('#'+i).val(localStorage.getItem(times));
             if(currentTime === i) {
-                $('#'+i).css('background-color', 'teal');
+                $('#'+i).css('background-image', 'linear-gradient(#005033, #008C66 )');
                 $('#'+i).css('color', 'white');
             } else if(currentTime < i) {
-                $('#'+i).css('background-color', 'black');
+                $('#'+i).css('background-image', 'linear-gradient(#00667D, #6600C3)');
                 $('#'+i).css('color', 'white');
             } else {
-                $('#'+i).css('background-color', 'blue');
+                $('#'+i).css('background-image', 'linear-gradient(#66000A, #778899)');
                 $('#'+i).css('color', 'white');
             }
         }
