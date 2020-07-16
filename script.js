@@ -7,11 +7,21 @@ $(document).ready(function() {
 
     $('.saveBtn').on('click', function() {
         event.preventDefault();
-        var input = ($(this).prev().children('.form-control').val());
-        var id = ($(this).prev().children('.form-control').attr('id'));
+        var input = ($(this).prev('.form-control').val());
+        var id = ($(this).prev('.form-control').attr('id'));
+        console.log(id)
         localStorage.setItem('input' + id, input);
 
     });
+
+    $('.delBtn').on('click', function() {
+        event.preventDefault();
+        var input = ($(this).prev('.saveBtn').prev().val());
+        var id = ($(this).prev('.saveBtn').prev().attr('id'));
+        location.reload();
+        localStorage.removeItem('input' + id, input);
+        console.log(localStorage)
+    })
 
 
 
@@ -22,10 +32,10 @@ $(document).ready(function() {
             var times = 'input' + i;
             $('#'+i).val(localStorage.getItem(times));
             if(currentTime === i) {
-                $('#'+i).css('background-color', 'green');
+                $('#'+i).css('background-color', 'teal');
                 $('#'+i).css('color', 'white');
             } else if(currentTime < i) {
-                $('#'+i).css('background-color', 'red');
+                $('#'+i).css('background-color', 'black');
                 $('#'+i).css('color', 'white');
             } else {
                 $('#'+i).css('background-color', 'blue');
